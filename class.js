@@ -36,8 +36,14 @@ var Clothes = class {
     }
 }
 
-class Shirt extends Clothes{
-    constructor(){
-    super('shirt','S','50');
+class Shirts extends Clothes{
+    constructor(name, size, price){
+    super(name, size, price)
+    }
+    shoutOut(){
+      console.log('I bought '+this.name+'.');
+    }
 }
-}
+
+var alohaShirt = new Shirts('aloha shirt','S','$50');
+alohaShirt.shoutOut()
